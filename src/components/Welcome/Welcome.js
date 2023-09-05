@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Welcome(){
     return (
         <section id="home">
@@ -7,7 +9,7 @@ function Welcome(){
                
                <p>So why wait? Join our community today and start 
                  discovering and sharing the best events in your area!</p>
-                 <a className="event-btn" href="#">To Events</a>       
+                 <Link className="event-btn" to="/dashboard">To Events</Link>       
           </div>
           <img className="party-img" src="./images/party people.png" alt="event"/>
         </section>
