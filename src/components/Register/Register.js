@@ -1,7 +1,7 @@
 function Register(){
     return(
         <section id="register">
-        <div className="className=m">
+        <div className="form">
           <h2>Register</h2>
           <form className="register-form">
             <input
