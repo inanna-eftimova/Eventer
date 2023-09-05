@@ -1,12 +1,14 @@
-function Event(){
+import { Link } from "react-router-dom";
+
+function Event({event}){  
     return (
         <div className="event">
-        <img src="./images/large_deniroparty_marquee.jpg" alt="example1" />
+        <img src={event.imageUrl} alt="example1" />
         <p className="title">
-          Robert De Niro Themed Party
+          {event.name}
         </p>
-        <p className="date">15.04.2023 from 17:00</p>
-        <a className="details-btn" href="">Details</a>
+        <p className="date">{event.date}</p>
+        <Link className="details-btn" to="/details/:id">Details</Link>
       </div>
     );
 }

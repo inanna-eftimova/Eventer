@@ -10,6 +10,7 @@ import Logout from "./components/Logout/Logout";
 import Welcome from "./components/Welcome/Welcome";
 import CatalogEvents from "./components/Events/CatalogEvents/CatalogEvents";
 import CreateEvent from "./components/Events/CreateEvent/CreateEvent";
+import DetailsEvent from "./components/Events/DetailsEvent/DetailsEvent";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
 
           <Route path="/dashboard" element={<CatalogEvents/>} />
           <Route path="/create" element={<CreateEvent/>} />
+          <Route path="/details" element={<DetailsEvent/>} />
         </Routes>
 
       </main>
