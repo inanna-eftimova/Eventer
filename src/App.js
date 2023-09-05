@@ -27,7 +27,7 @@ function App() {
 
           <Route path="/dashboard" element={<CatalogEvents/>} />
           <Route path="/create" element={<CreateEvent/>} />
-          <Route path="/details" element={<DetailsEvent/>} />
+          <Route path="/details/:id" element={<DetailsEvent/>} />
         </Routes>
 
       </main>

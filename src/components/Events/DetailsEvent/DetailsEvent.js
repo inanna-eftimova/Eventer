@@ -1,24 +1,31 @@
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import * as eventService from "../../../services/eventServices"
 
-function DetailsEvent({
-    evet
-}) {
+function DetailsEvent(
+) {
+    const params = useParams();
+    const [singleEvent, setEvent] = useState([]);
+    useEffect(() => {
+        eventService.getSingleEvent(params.id)
+            .then(singleEvent => setEvent(singleEvent));
+
+    });
     return (
         <section id="details">
             <div id="details-wrapper">
-                <img id="details-img" src="./images/large_deniroparty_marquee.jpg" alt="example1" />
-                <p id="details-title">Robert De Niro Themed Party</p>
+                <img id="details-img" src={singleEvent.imageUrl} alt="example1" />
+                <p id="details-title">{singleEvent.name}</p>
                 <p id="details-category">
-                    Category: <span id="categories">Fun</span>
+                    Category: <span id="categories">{singleEvent.category}</span>
                 </p>
                 <p id="details-date">
-                    Date:<span id="date">15.04.2023 from 17:00</span></p>
+                    Date:<span id="date">{singleEvent.date}</span></p>
                 <div id="info-wrapper">
                     <div id="details-description">
                         <span
-                        >Welcome to the ultimate Robert De Niro themed party! If you're a fan of this legendary actor's films and characters, then this is the party for you.
-                            Entertainment can include a De Niro movie trivia game, a dance-off to classic songs from his films, and even an impression contest where guests can try their best De Niro impressions.
-                            End the night with a screening of one of De Niro's greatest films, followed by a toast to the man himself. Your guests will be talking about this unforgettable party for years to come!</span>
+                        >{singleEvent.description}</span>
                     </div>
 
                 </div>
@@ -27,8 +34,8 @@ function DetailsEvent({
 
 
                 <div id="action-buttons">
-                    <Link to="/edi/id" id="edit-btn">Edit</Link>
-                    <Link to="/delete/id" id="delete-btn">Delete</Link>
+                    <Link to={`/edit/${params.id}`} id="edit-btn">Edit</Link>
+                    <Link to={`/delete/${params.id}`} id="delete-btn">Delete</Link>
 
 
                     <Link to="/" id="go-btn">Going</Link>

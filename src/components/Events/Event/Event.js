@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Event({event}){  
+
     return (
         <div className="event">
         <img src={event.imageUrl} alt="example1" />
@@ -8,7 +9,7 @@ function Event({event}){
           {event.name}
         </p>
         <p className="date">{event.date}</p>
-        <Link className="details-btn" to="/details/:id">Details</Link>
+        <Link className="details-btn" to={`/details/${event._id}`}>Details</Link>
       </div>
     );
 }

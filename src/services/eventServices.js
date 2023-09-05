@@ -7,8 +7,8 @@ export const getAll = async () => {
    return events;   
 }
 
-export const getSingleEvent = async () => {
-   let responce = await fetch(`${baseUrl}/data/events/:id`);
+export const getSingleEvent = async (id) => {
+   let responce = await fetch(`${baseUrl}/data/events/${id}`);
    let events = responce.json();
 
    return events;   
