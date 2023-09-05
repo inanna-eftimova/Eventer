@@ -1,44 +1,15 @@
+import Header from "./components/Header/Header";
+import Welcome from "./components/Welcome/Welcome";
+
 function App() {
   return (
     <div>
     <div id="wrapper">
-      <header>
-        <a id="logo" href="/"
-          ><img id="logo-img" src="./images/logo.png" alt=""
-        /></a>
-
-        <nav>
-          <div>
-            <a href="#">Events</a>
-          </div>
-
-     
-          <div className="user">
-            <a href="#">Add Event</a>
-            <a href="#">Logout</a>
-          </div>
-
-          
-          <div className="guest">
-            <a href="#">Login</a>
-            <a href="#">Register</a>
-          </div>
-        </nav>
-      </header>
+    <Header/>
 
       <main>
         
-        <section id="home">
-          <div className="home-intro">
-            <h1 className="fancy">Welcome to our community-driven events website! We believe that the best events
-              come from the community.</h1>
-               
-               <p>So why wait? Join our community today and start 
-                 discovering and sharing the best events in your area!</p>
-                 <a className="event-btn" href="#">To Events</a>       
-          </div>
-          <img className="party-img" src="./images/party people.png" alt="event"/>
-        </section>
+        <Welcome/>
 
        
         <h2>Current Events</h2>
