@@ -43,56 +43,6 @@ function App() {
         
          <h4>No Events yet.</h4>
 
-        
-        <section id="register">
-          <div className="className=m">
-            <h2>Register</h2>
-            <form className="register-form">
-              <input
-                type="text"
-                name="email"
-                id="register-email"
-                placeholder="email"
-              />
-              <input
-                type="password"
-                name="password"
-                id="register-password"
-                placeholder="password"
-              />
-              <input
-                type="password"
-                name="re-password"
-                id="repeat-password"
-                placeholder="repeat password"
-              />
-              <button type="submit">register</button>
-              <p className="message">Already registered? <a href="#">Login</a></p>
-            </form>
-          </div>
-        </section>
-
-        
-        <section id="login">
-          <div className="form">
-            <h2>Login</h2>
-            <form className="login-form">
-              <input type="text" name="email" id="email" placeholder="email" />
-              <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="password"
-              />
-              <button type="submit">login</button>
-              <p className="message">
-                Not registered? <a href="#">Create an account</a>
-              </p>
-            </form>
-          </div>
-        </section>
-
-     
         <section id="create">
           <div className="form">
             <h2>Add Event</h2>
