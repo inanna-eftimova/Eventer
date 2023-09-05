@@ -1,4 +1,8 @@
-function DetailsEvent() {
+import { Link } from "react-router-dom";
+
+function DetailsEvent({
+    evet
+}) {
     return (
         <section id="details">
             <div id="details-wrapper">
@@ -23,11 +27,11 @@ function DetailsEvent() {
 
 
                 <div id="action-buttons">
-                    <a href="" id="edit-btn">Edit</a>
-                    <a href="" id="delete-btn">Delete</a>
+                    <Link to="/edi/id" id="edit-btn">Edit</Link>
+                    <Link to="/delete/id" id="delete-btn">Delete</Link>
 
 
-                    <a href="" id="go-btn">Going</a>
+                    <Link to="/" id="go-btn">Going</Link>
                 </div>
             </div>
         </section>

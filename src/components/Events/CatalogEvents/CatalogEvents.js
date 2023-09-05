@@ -16,12 +16,13 @@ function CatalogEvents() {
   return (
     <div>
       <h2>Current Events</h2>
-      <section id="dashboard">
-        {events.map(x => <Event key={x._id} event={x} />)}
-      </section>
 
-
-      <h4>No Events yet.</h4>
+      {events.length > 0
+        ? <section id="dashboard">
+          {events.map(x => <Event key={x._id} event={x} />)}
+        </section>
+        : <h4>No Events yet.</h4>
+      }
     </div>
   );
 }
